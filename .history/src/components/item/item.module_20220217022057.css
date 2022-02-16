@@ -1,0 +1,5 @@
+.items {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 10% 10% 10%;
+  height: 1rem;
+}

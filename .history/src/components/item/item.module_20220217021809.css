@@ -1,0 +1,5 @@
+.items {
+  display: grid;
+  grid-template-columns: 5rem 15rem 15rem 5rem 5rem 5rem;
+  color: blue;
+}

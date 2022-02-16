@@ -1,0 +1,10 @@
+.items {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 10% 10% 10%;
+  height: 2rem;
+}
+
+p {
+  text-align: center;
+  line-height: 10px;
+}

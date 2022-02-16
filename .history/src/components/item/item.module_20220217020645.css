@@ -1,0 +1,4 @@
+.items {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: blue;
+}
