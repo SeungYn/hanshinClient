@@ -1,0 +1,10 @@
+header {
+  background: no-repeat url('./backimg.png');
+  background-size: cover;
+  height: 4rem;
+  display: flex;
+}
+
+.title {
+  color: white;
+}

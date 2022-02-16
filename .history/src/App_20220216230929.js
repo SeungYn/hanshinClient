@@ -1,9 +1,9 @@
 import './App.css';
-import Header from './components/header/header';
+
 function App() {
   return (
     <div>
-      <Header />
+      <img src='imgs/backg.png' alt='asd' />
     </div>
   );
 }
