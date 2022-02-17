@@ -6,11 +6,10 @@
 }
 
 .items:hover {
-  background-color: #fef6ff;
+  background-color: blue;
 }
 
 p {
-  /* 크기를 넘기면 자동으로 줄바꿈 */
   text-align: center;
   overflow-wrap: break-word;
 }

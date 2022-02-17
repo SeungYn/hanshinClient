@@ -22,12 +22,6 @@
   padding: 0.5rem;
 }
 
-.navbar__item:hover {
-  background-color: #ab74f7;
-  color: #fef6ff;
-  cursor: pointer;
-}
-
 .itemList {
   height: 100%;
   display: grid;

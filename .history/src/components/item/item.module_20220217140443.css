@@ -1,16 +1,19 @@
 .items {
   display: grid;
   grid-template-columns: 10% 6% 30% 30% 10% 7% 7%;
-  align-items: center;
+
+  height: 3rem;
   border: 1px solid black;
 }
 
 .items:hover {
-  background-color: #fef6ff;
+  background-color: blue;
 }
 
 p {
-  /* 크기를 넘기면 자동으로 줄바꿈 */
   text-align: center;
-  overflow-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 4;
 }

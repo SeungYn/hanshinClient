@@ -1,0 +1,13 @@
+.items {
+  display: grid;
+  grid-template-columns: 10% 6% 30% 30% 10% 7% 7%;
+
+  border: 1px solid black;
+}
+
+.items:hover {
+  background-color: blue;
+}
+
+p {
+}

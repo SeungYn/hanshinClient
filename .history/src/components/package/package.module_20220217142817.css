@@ -24,8 +24,7 @@
 
 .navbar__item:hover {
   background-color: #ab74f7;
-  color: #fef6ff;
-  cursor: pointer;
+  color: white;
 }
 
 .itemList {

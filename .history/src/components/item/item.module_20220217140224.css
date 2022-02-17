@@ -1,0 +1,19 @@
+.items {
+  display: grid;
+  grid-template-columns: 10% 6% 30% 30% 10% 7% 7%;
+  grid-auto-rows: minmax(3rem, auto);
+  height: 3rem;
+  border: 1px solid black;
+}
+
+.items:hover {
+  background-color: blue;
+}
+
+p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}

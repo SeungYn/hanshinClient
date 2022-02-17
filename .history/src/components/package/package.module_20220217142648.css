@@ -9,7 +9,7 @@
 .navbar {
   display: flex;
   justify-content: center;
-  color: #ab74f7;
+  color: blue;
   width: 100%;
 }
 
@@ -20,12 +20,6 @@
   flex-basis: 5rem;
   background-color: #fef6ff;
   padding: 0.5rem;
-}
-
-.navbar__item:hover {
-  background-color: #ab74f7;
-  color: #fef6ff;
-  cursor: pointer;
 }
 
 .itemList {

@@ -9,29 +9,13 @@
 .navbar {
   display: flex;
   justify-content: center;
-  color: #ab74f7;
+  color: blue;
   width: 100%;
 }
 
 .navbar__item {
-  text-align: center;
-  line-height: 1.5rem;
-  font-size: 1.5rem;
-  flex-basis: 5rem;
-  background-color: #fef6ff;
-  padding: 0.5rem;
-}
-
-.navbar__item:hover {
-  background-color: #ab74f7;
-  color: #fef6ff;
-  cursor: pointer;
-}
-
-.itemList {
-  height: 100%;
-  display: grid;
-  grid-auto-rows: minmax(2rem, auto);
+  font-size: 2rem;
+  flex-basis: 4rem;
 }
 
 .items {

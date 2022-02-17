@@ -1,0 +1,14 @@
+.items {
+  display: grid;
+  grid-template-columns: 10% 6% 30% 30% 10% 7% 7%;
+  height: 2rem;
+}
+
+.items:hover {
+  background-color: blue;
+}
+
+p {
+  text-align: center;
+  line-height: 2rem;
+}

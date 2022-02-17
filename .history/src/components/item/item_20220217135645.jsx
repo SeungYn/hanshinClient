@@ -8,7 +8,7 @@ const Item = ({ item }) => {
       <p>{item.receiver}</p>
       <p>{item.sender}</p>
       <p>22.12.12</p>
-      <p>dsafsafawefwaefsadfsdaf</p>
+      <p>홍길동ddddddd</p>
       <p>123</p>
     </li>
   );
