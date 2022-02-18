@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/header/header';
 import Package from './components/package/package';
 import { Route, Routes } from 'react-router-dom';
-import AddBoxs from './addboxs/addBoxs';
+import AddBoxs from './addbox/addBoxs';
 function App() {
   return (
     <div className='app'>

@@ -1,0 +1,5 @@
+.items {
+  display: grid;
+  grid-template-columns: minmax(10%, auto) 6% 30% 30% 10% 7% 7%;
+  align-items: center;
+}
