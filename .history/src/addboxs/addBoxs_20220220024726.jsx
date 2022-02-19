@@ -154,7 +154,7 @@ const AddBoxs = (props) => {
         </button>
         <input type='text' name='count' ref={countRef} />
         <button className={styles.addBtn} onClick={onMultiAdd}>
-          <FontAwesomeIcon icon={faCartPlus} size='2x' />
+          <FontAwesomeIcon icon={faCartPlus} />
         </button>
       </div>
     </section>

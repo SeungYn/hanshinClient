@@ -19,7 +19,6 @@
 button {
   background-color: transparent;
   border: none;
-  color: #f8d5fd;
 }
 
 .bottomBtn {
@@ -28,7 +27,6 @@ button {
 
 .addBtn:hover {
   cursor: pointer;
-  color: #e5a3ff;
 }
 
 .test {

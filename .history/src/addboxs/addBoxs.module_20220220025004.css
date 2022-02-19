@@ -18,17 +18,13 @@
 
 button {
   background-color: transparent;
-  border: none;
-  color: #f8d5fd;
 }
 
 .bottomBtn {
   display: flex;
 }
 
-.addBtn:hover {
-  cursor: pointer;
-  color: #e5a3ff;
+.addBtn {
 }
 
 .test {

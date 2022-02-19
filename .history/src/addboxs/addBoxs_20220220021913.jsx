@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react';
 import styles from './addBoxs.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCirclePlus, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 const AddBoxs = (props) => {
   const [boxList, setBoxList] = useState([
@@ -150,12 +148,13 @@ const AddBoxs = (props) => {
       </form>
       <div className={styles.bottomBtn}>
         <button className={styles.addBtn} onClick={onAdd}>
-          <FontAwesomeIcon icon={faCirclePlus} size='2x' />
+          한줄추가
         </button>
         <input type='text' name='count' ref={countRef} />
         <button className={styles.addBtn} onClick={onMultiAdd}>
-          <FontAwesomeIcon icon={faCartPlus} size='2x' />
+          다중추가
         </button>
+        <button></button>
       </div>
     </section>
   );
