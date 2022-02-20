@@ -5,15 +5,14 @@ import {
   faCirclePlus,
   faCartPlus,
   faCircleMinus,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
 const AddBoxs = (props) => {
   const [boxList, setBoxList] = useState([
     {
-      date: `${String(new Date().getFullYear()).substring(2, 4)}.${
+      date: `${String(new Date().getFullYear()).substring(2, 4)},${
         new Date().getMonth() + 1
-      }.${new Date().getDate()}`,
+      },${new Date().getDate()}`,
       boxId: '',
       kind: '',
       sender: '',
@@ -27,7 +26,7 @@ const AddBoxs = (props) => {
   const countRef = useRef();
 
   const onSubmit = (e) => {
-    console.log(boxList);
+    e.console.log(1);
   };
 
   const onChange = (event, index) => {
@@ -37,15 +36,37 @@ const AddBoxs = (props) => {
 
     boxs[index][name] = value;
     setBoxList(boxs);
+
+    // switch (name) {
+    //   case 'date':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'kind':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'sender':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'receiver':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'receivedDate':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'position':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    //   case 'name':
+    //     boxs[index][name] = value;
+    //     return setBoxList(boxs);
+    // }
   };
 
   const onAdd = () => {
     setBoxList([
       ...boxList,
       {
-        date: `${String(new Date().getFullYear()).substring(2, 4)}.${
-          new Date().getMonth() + 1
-        }.${new Date().getDate()}`,
+        date: '',
         boxId: '',
         kind: '',
         sender: '',
@@ -61,14 +82,14 @@ const AddBoxs = (props) => {
     const count = countRef.current.value;
 
     if (!countValidation()) {
+      console.log(11);
       return;
     } else {
+      console.log(22);
       const boxs = [...boxList];
       for (let i = 0; i < count; i++) {
         boxs.push({
-          date: `${String(new Date().getFullYear()).substring(2, 4)}.${
-            new Date().getMonth() + 1
-          }.${new Date().getDate()}`,
+          date: '',
           boxId: '',
           kind: '',
           sender: '',
@@ -121,6 +142,7 @@ const AddBoxs = (props) => {
           <p className={styles.item}>수령날짜</p>
           <p className={styles.item}>직책</p>
           <p className={styles.item}>이름</p>
+          <p className={styles.item}>제거</p>
         </div>
         {boxList.map((box, index) => {
           return (
@@ -184,28 +206,19 @@ const AddBoxs = (props) => {
           );
         })}
       </form>
-      <div className={styles.bottom}>
-        <div className={styles.bottomBtn}>
-          <button id='test' className={`${styles.addBtn}`} onClick={onAdd}>
-            <FontAwesomeIcon icon={faCirclePlus} size='2x' />
-          </button>
-          <input
-            type='text'
-            name='count'
-            ref={countRef}
-            placeholder='숫자만 입력해주세요'
-            className={styles.countText}
-          />
-          <button className={styles.addBtn} onClick={onMultiAdd}>
-            <FontAwesomeIcon icon={faCartPlus} size='2x' />
-          </button>
-        </div>
-
-        <button
-          className={`${styles.addBtn} ${styles.sendBtn}`}
-          onClick={onSubmit}
-        >
-          <FontAwesomeIcon icon={faPaperPlane} size='2x' />
+      <div className={styles.bottomBtn}>
+        <button className={`${styles.addBtn}`} onClick={onAdd}>
+          <FontAwesomeIcon icon={faCirclePlus} size='2x' />
+        </button>
+        <input
+          type='text'
+          name='count'
+          ref={countRef}
+          placeholder='숫자만 입력해주세요'
+          className={styles.countText}
+        />
+        <button className={styles.addBtn} onClick={onMultiAdd}>
+          <FontAwesomeIcon icon={faCartPlus} size='2x' />
         </button>
       </div>
     </section>

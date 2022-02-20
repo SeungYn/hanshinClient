@@ -27,7 +27,7 @@ const AddBoxs = (props) => {
   const countRef = useRef();
 
   const onSubmit = (e) => {
-    console.log(boxList);
+    console.log(1);
   };
 
   const onChange = (event, index) => {

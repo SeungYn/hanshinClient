@@ -5,7 +5,6 @@ import {
   faCirclePlus,
   faCartPlus,
   faCircleMinus,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
 const AddBoxs = (props) => {
@@ -27,7 +26,7 @@ const AddBoxs = (props) => {
   const countRef = useRef();
 
   const onSubmit = (e) => {
-    console.log(boxList);
+    e.console.log(1);
   };
 
   const onChange = (event, index) => {
@@ -121,6 +120,7 @@ const AddBoxs = (props) => {
           <p className={styles.item}>수령날짜</p>
           <p className={styles.item}>직책</p>
           <p className={styles.item}>이름</p>
+          <p className={styles.item}>제거</p>
         </div>
         {boxList.map((box, index) => {
           return (
@@ -184,28 +184,19 @@ const AddBoxs = (props) => {
           );
         })}
       </form>
-      <div className={styles.bottom}>
-        <div className={styles.bottomBtn}>
-          <button id='test' className={`${styles.addBtn}`} onClick={onAdd}>
-            <FontAwesomeIcon icon={faCirclePlus} size='2x' />
-          </button>
-          <input
-            type='text'
-            name='count'
-            ref={countRef}
-            placeholder='숫자만 입력해주세요'
-            className={styles.countText}
-          />
-          <button className={styles.addBtn} onClick={onMultiAdd}>
-            <FontAwesomeIcon icon={faCartPlus} size='2x' />
-          </button>
-        </div>
-
-        <button
-          className={`${styles.addBtn} ${styles.sendBtn}`}
-          onClick={onSubmit}
-        >
-          <FontAwesomeIcon icon={faPaperPlane} size='2x' />
+      <div className={styles.bottomBtn}>
+        <button className={`${styles.addBtn}`} onClick={onAdd}>
+          <FontAwesomeIcon icon={faCirclePlus} size='2x' />
+        </button>
+        <input
+          type='text'
+          name='count'
+          ref={countRef}
+          placeholder='숫자만 입력해주세요'
+          className={styles.countText}
+        />
+        <button className={styles.addBtn} onClick={onMultiAdd}>
+          <FontAwesomeIcon icon={faCartPlus} size='2x' />
         </button>
       </div>
     </section>

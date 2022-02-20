@@ -27,7 +27,7 @@ const AddBoxs = (props) => {
   const countRef = useRef();
 
   const onSubmit = (e) => {
-    console.log(boxList);
+    console.log(1);
   };
 
   const onChange = (event, index) => {
@@ -121,6 +121,7 @@ const AddBoxs = (props) => {
           <p className={styles.item}>수령날짜</p>
           <p className={styles.item}>직책</p>
           <p className={styles.item}>이름</p>
+          <p className={styles.item}>제거</p>
         </div>
         {boxList.map((box, index) => {
           return (
@@ -199,14 +200,10 @@ const AddBoxs = (props) => {
           <button className={styles.addBtn} onClick={onMultiAdd}>
             <FontAwesomeIcon icon={faCartPlus} size='2x' />
           </button>
+          <button className={styles.addBtn} onClick={onSubmit}>
+            <FontAwesomeIcon icon={faPaperPlane} size='2x' />
+          </button>
         </div>
-
-        <button
-          className={`${styles.addBtn} ${styles.sendBtn}`}
-          onClick={onSubmit}
-        >
-          <FontAwesomeIcon icon={faPaperPlane} size='2x' />
-        </button>
       </div>
     </section>
   );

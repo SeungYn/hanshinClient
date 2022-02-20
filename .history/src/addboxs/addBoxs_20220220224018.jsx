@@ -27,7 +27,7 @@ const AddBoxs = (props) => {
   const countRef = useRef();
 
   const onSubmit = (e) => {
-    console.log(boxList);
+    console.log(1);
   };
 
   const onChange = (event, index) => {
@@ -202,7 +202,7 @@ const AddBoxs = (props) => {
         </div>
 
         <button
-          className={`${styles.addBtn} ${styles.sendBtn}`}
+          className={`${styles.addBtn}${styles.sendBtn}`}
           onClick={onSubmit}
         >
           <FontAwesomeIcon icon={faPaperPlane} size='2x' />

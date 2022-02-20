@@ -13,7 +13,7 @@ input:focus {
 .addFormHeader {
   width: 100%;
   display: grid;
-  grid-template-columns: 8% 12% 4% 24% 24% 10% 7% 7% 2%;
+  grid-template-columns: 8% 9% 4% 24% 24% 9% 7% 7% 4%;
   justify-content: center;
   color: #8541f6;
   column-gap: 0.2rem;
@@ -31,7 +31,7 @@ input:focus {
 /* 8% 10% 5% 27% 27% 8% 7% 7%; */
 .items {
   display: grid;
-  grid-template-columns: 8% 12% 4% 24% 24% 10% 7% 7% 2%;
+  grid-template-columns: 8% 10% 4% 24% 24% 10% 7% 7% 2%;
   align-items: center;
   column-gap: 0.2rem;
   margin-top: 0.5rem;
@@ -57,27 +57,22 @@ button {
 }
 .bottom {
   height: 100%;
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 .bottomBtn {
   display: flex;
 }
 
-.bottom::before {
-  content: '.';
-  color: transparent;
+.bottomBtn:first-child::before {
+  content: ' ';
+  width: 1px;
+  color: black;
 }
 
 .addBtn:hover {
   cursor: pointer;
   color: #e5a3ff;
-}
-
-.sendBtn {
-  font-size: 1rem;
 }
 
 .test {
