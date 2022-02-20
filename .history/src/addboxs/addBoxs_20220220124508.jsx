@@ -10,7 +10,7 @@ import {
 const AddBoxs = (props) => {
   const [boxList, setBoxList] = useState([
     {
-      date: new Date().getFullYear(),
+      date: '',
       boxId: '',
       kind: '',
       sender: '',
@@ -78,12 +78,9 @@ const AddBoxs = (props) => {
 
   const onMultiAdd = () => {
     const count = countRef.current.value;
-
-    if (!countValidation()) {
-      console.log(11);
-      return;
-    } else {
-      console.log(22);
+    console.log(countValidation());
+    if (!countValidation()) return;
+    else {
       const boxs = [...boxList];
       for (let i = 0; i < count; i++) {
         boxs.push({
@@ -110,7 +107,7 @@ const AddBoxs = (props) => {
   //count 검사
   const countValidation = () => {
     const count = countRef.current.value;
-    console.log(count);
+    console.log(countRef);
     if (!isNaN(count)) {
       if (count > 20) {
         countRef.current.style.borderColor = 'red';
@@ -118,30 +115,26 @@ const AddBoxs = (props) => {
         countRef.current.placeholder = '한번에 20개 까지만 추가가능';
         return false;
       }
-      countRef.current.style.borderColor = 'blue';
-      return true;
     } else {
       countRef.current.style.borderColor = 'red';
       countRef.current.value = '';
       countRef.current.placeholder = '숫자만 입력해주세요';
-      return false;
     }
   };
 
   return (
     <section className={styles.addContainer}>
+      <div className={styles.addFormHeader}>
+        <h2 className={styles.item}>날짜</h2>
+        <h2 className={styles.item}>송장번호</h2>
+        <h2 className={styles.item}>종류</h2>
+        <h2 className={styles.item}>보낸분</h2>
+        <h2 className={styles.item}>받는분</h2>
+        <h2 className={styles.item}>수령날짜</h2>
+        <h2 className={styles.item}>직책</h2>
+        <h2 className={styles.item}>이름</h2>
+      </div>
       <form onSubmit={onSubmit} className={styles.addForm}>
-        <div className={styles.addFormHeader}>
-          <p className={styles.item}>날짜</p>
-          <p className={styles.item}>송장번호</p>
-          <p className={styles.item}>종류</p>
-          <p className={styles.item}>보낸분</p>
-          <p className={styles.item}>받는분</p>
-          <p className={styles.item}>수령날짜</p>
-          <p className={styles.item}>직책</p>
-          <p className={styles.item}>이름</p>
-          <p className={styles.item}>제거</p>
-        </div>
         {boxList.map((box, index) => {
           return (
             <div className={styles.items} key={index}>
@@ -213,7 +206,6 @@ const AddBoxs = (props) => {
           name='count'
           ref={countRef}
           placeholder='숫자만 입력해주세요'
-          className={styles.countText}
         />
         <button className={styles.addBtn} onClick={onMultiAdd}>
           <FontAwesomeIcon icon={faCartPlus} size='2x' />

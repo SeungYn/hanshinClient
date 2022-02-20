@@ -1,17 +1,12 @@
 import React, { useRef, useState } from 'react';
 import styles from './addBoxs.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCirclePlus,
-  faCartPlus,
-  faCircleMinus,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlus, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 const AddBoxs = (props) => {
   const [boxList, setBoxList] = useState([
     {
-      date: new Date().getFullYear(),
-      boxId: '',
+      date: '',
       kind: '',
       sender: '',
       receiver: '',
@@ -61,11 +56,11 @@ const AddBoxs = (props) => {
   };
 
   const onAdd = () => {
+    countValidation();
     setBoxList([
       ...boxList,
       {
         date: '',
-        boxId: '',
         kind: '',
         sender: '',
         receiver: '',
@@ -78,27 +73,19 @@ const AddBoxs = (props) => {
 
   const onMultiAdd = () => {
     const count = countRef.current.value;
-
-    if (!countValidation()) {
-      console.log(11);
-      return;
-    } else {
-      console.log(22);
-      const boxs = [...boxList];
-      for (let i = 0; i < count; i++) {
-        boxs.push({
-          date: '',
-          boxId: '',
-          kind: '',
-          sender: '',
-          receiver: '',
-          receivedDate: '',
-          position: '',
-          name: '',
-        });
-      }
-      setBoxList(boxs);
+    const boxs = [...boxList];
+    for (let i = 0; i < count; i++) {
+      boxs.push({
+        date: '',
+        kind: '',
+        sender: '',
+        receiver: '',
+        receivedDate: '',
+        position: '',
+        name: '',
+      });
     }
+    setBoxList(boxs);
   };
 
   const onRemove = (event, index) => {
@@ -110,38 +97,19 @@ const AddBoxs = (props) => {
   //count 검사
   const countValidation = () => {
     const count = countRef.current.value;
-    console.log(count);
+    console.log(countRef);
     if (!isNaN(count)) {
-      if (count > 20) {
-        countRef.current.style.borderColor = 'red';
-        countRef.current.value = '';
-        countRef.current.placeholder = '한번에 20개 까지만 추가가능';
-        return false;
-      }
-      countRef.current.style.borderColor = 'blue';
-      return true;
+      console.log('숫자입니다');
     } else {
       countRef.current.style.borderColor = 'red';
       countRef.current.value = '';
       countRef.current.placeholder = '숫자만 입력해주세요';
-      return false;
     }
   };
 
   return (
     <section className={styles.addContainer}>
       <form onSubmit={onSubmit} className={styles.addForm}>
-        <div className={styles.addFormHeader}>
-          <p className={styles.item}>날짜</p>
-          <p className={styles.item}>송장번호</p>
-          <p className={styles.item}>종류</p>
-          <p className={styles.item}>보낸분</p>
-          <p className={styles.item}>받는분</p>
-          <p className={styles.item}>수령날짜</p>
-          <p className={styles.item}>직책</p>
-          <p className={styles.item}>이름</p>
-          <p className={styles.item}>제거</p>
-        </div>
         {boxList.map((box, index) => {
           return (
             <div className={styles.items} key={index}>
@@ -150,12 +118,6 @@ const AddBoxs = (props) => {
                 name='date'
                 onChange={(event) => onChange(event, index)}
                 value={box.date}
-              />
-              <input
-                type='text'
-                name='boxId'
-                onChange={(event) => onChange(event, index)}
-                value={box.boxId}
               />
               <input
                 type='text'
@@ -193,19 +155,15 @@ const AddBoxs = (props) => {
                 onChange={(event) => onChange(event, index)}
                 value={box.name}
               />
-              <button
-                type='button'
-                className={`${styles.addBtn} ${styles.minus}`}
-                onClick={(event) => onRemove(event, index)}
-              >
-                <FontAwesomeIcon icon={faCircleMinus} size='2x' />
+              <button type='button' onClick={(event) => onRemove(event, index)}>
+                -
               </button>
             </div>
           );
         })}
       </form>
       <div className={styles.bottomBtn}>
-        <button className={`${styles.addBtn}`} onClick={onAdd}>
+        <button className={styles.addBtn} onClick={onAdd}>
           <FontAwesomeIcon icon={faCirclePlus} size='2x' />
         </button>
         <input
@@ -213,7 +171,6 @@ const AddBoxs = (props) => {
           name='count'
           ref={countRef}
           placeholder='숫자만 입력해주세요'
-          className={styles.countText}
         />
         <button className={styles.addBtn} onClick={onMultiAdd}>
           <FontAwesomeIcon icon={faCartPlus} size='2x' />

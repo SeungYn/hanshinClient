@@ -46,10 +46,6 @@ input[type='text'] {
   padding: 0.8rem 0.2rem;
 }
 
-.countText {
-  border: 1px solid #8541f6;
-}
-
 button {
   background-color: transparent;
   border: none;

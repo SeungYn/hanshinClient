@@ -1,0 +1,43 @@
+input:focus {
+  outline: none;
+}
+
+.addContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addForm {
+  width: 100%;
+  padding: 1rem;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 10% 7% 28% 28% 10% 7% 7% 3%;
+  align-items: center;
+  grid-gap: 0.2rem;
+}
+.minus {
+  padding: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: #f8d5fd;
+}
+
+.bottomBtn {
+  display: flex;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+  color: #e5a3ff;
+}
+
+.test {
+  width: 112px;
+}

@@ -10,7 +10,7 @@ import {
 const AddBoxs = (props) => {
   const [boxList, setBoxList] = useState([
     {
-      date: new Date().getFullYear(),
+      date: new Date(),
       boxId: '',
       kind: '',
       sender: '',
@@ -78,12 +78,9 @@ const AddBoxs = (props) => {
 
   const onMultiAdd = () => {
     const count = countRef.current.value;
-
-    if (!countValidation()) {
-      console.log(11);
-      return;
-    } else {
-      console.log(22);
+    console.log(countValidation());
+    if (!countValidation()) return;
+    else {
       const boxs = [...boxList];
       for (let i = 0; i < count; i++) {
         boxs.push({
@@ -110,7 +107,7 @@ const AddBoxs = (props) => {
   //count 검사
   const countValidation = () => {
     const count = countRef.current.value;
-    console.log(count);
+    console.log(countRef);
     if (!isNaN(count)) {
       if (count > 20) {
         countRef.current.style.borderColor = 'red';
@@ -118,13 +115,10 @@ const AddBoxs = (props) => {
         countRef.current.placeholder = '한번에 20개 까지만 추가가능';
         return false;
       }
-      countRef.current.style.borderColor = 'blue';
-      return true;
     } else {
       countRef.current.style.borderColor = 'red';
       countRef.current.value = '';
       countRef.current.placeholder = '숫자만 입력해주세요';
-      return false;
     }
   };
 
@@ -213,7 +207,6 @@ const AddBoxs = (props) => {
           name='count'
           ref={countRef}
           placeholder='숫자만 입력해주세요'
-          className={styles.countText}
         />
         <button className={styles.addBtn} onClick={onMultiAdd}>
           <FontAwesomeIcon icon={faCartPlus} size='2x' />

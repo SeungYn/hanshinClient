@@ -43,11 +43,7 @@ input:focus {
 input[type='text'] {
   height: 1.8rem;
   font-size: 1.2rem;
-  padding: 0.8rem 0.2rem;
-}
-
-.countText {
-  border: 1px solid #8541f6;
+  padding: 10px 0;
 }
 
 button {

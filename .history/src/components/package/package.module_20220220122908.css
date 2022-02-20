@@ -36,7 +36,7 @@
 
 .items {
   display: grid;
-  grid-template-columns: 8% 10% 5% 27% 27% 8% 7% 7%;
+  grid-template-columns: 8% 10% 5% 30% 30% 8% 7% 7%;
   height: 2rem;
 }
 

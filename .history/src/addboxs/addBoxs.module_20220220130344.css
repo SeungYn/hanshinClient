@@ -13,10 +13,9 @@ input:focus {
 .addFormHeader {
   width: 100%;
   display: grid;
-  grid-template-columns: 8% 9% 4% 24% 24% 9% 7% 7% 4%;
+  grid-template-columns: 8% 9% 4% 24% 24% 9% 7% 7% 2%;
   justify-content: center;
   color: #8541f6;
-  column-gap: 0.2rem;
 }
 
 .item {
@@ -34,7 +33,6 @@ input:focus {
   grid-template-columns: 8% 10% 4% 24% 24% 10% 7% 7% 2%;
   align-items: center;
   column-gap: 0.2rem;
-  margin-top: 0.5rem;
 }
 .minus {
   padding: 0;
@@ -42,12 +40,6 @@ input:focus {
 
 input[type='text'] {
   height: 1.8rem;
-  font-size: 1.2rem;
-  padding: 0.8rem 0.2rem;
-}
-
-.countText {
-  border: 1px solid #8541f6;
 }
 
 button {

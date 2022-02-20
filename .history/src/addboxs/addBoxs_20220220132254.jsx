@@ -78,8 +78,8 @@ const AddBoxs = (props) => {
 
   const onMultiAdd = () => {
     const count = countRef.current.value;
-
-    if (!countValidation()) {
+    console.log(countValidation() == false);
+    if (countValidation() == false) {
       console.log(11);
       return;
     } else {
@@ -110,7 +110,7 @@ const AddBoxs = (props) => {
   //count 검사
   const countValidation = () => {
     const count = countRef.current.value;
-    console.log(count);
+
     if (!isNaN(count)) {
       if (count > 20) {
         countRef.current.style.borderColor = 'red';
