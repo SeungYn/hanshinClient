@@ -1,0 +1,175 @@
+.receiverForm {
+  /* #e0c9f7 */
+  background-color: #f7f1f9;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e0c9f7;
+}
+
+.receiverForm__header {
+  background-color: #e0c9f7;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 0.2rem 0;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.reveiverForm__header__exit {
+  position: absolute;
+  right: 5px;
+  color: white;
+  font-size: 1.6rem;
+  top: 0px;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reveiverForm__header__exit:hover {
+  color: purple;
+}
+
+.receiverForm__body {
+  padding: 0px 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio__group {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.checkedBox {
+  display: block;
+  border: 1px solid #e0c9f7;
+  background-color: white;
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkedBox:after {
+  content: '';
+  display: block;
+
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+input[type='radio']:checked + .checkedBox:after {
+  background-color: #a376ef;
+}
+
+.radio__label {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.radio__label__group {
+  display: flex;
+  align-items: center;
+}
+
+.name__group {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.input__title {
+  margin-right: 0.5rem;
+}
+
+.receiverForm__Footer {
+  margin-bottom: 1rem;
+}
+
+.packageList {
+  width: 100%;
+  max-height: 50%;
+  background-color: white;
+  overflow-y: scroll;
+  margin-top: 0.5rem;
+  border: 3px solid #e0bff7;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.packageList li:first-child {
+  text-align: center;
+}
+
+.packageList li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 12% 8% 20% 30% 30%;
+  grid-template-rows: minmax(1.6rem);
+  height: 23rem;
+  align-items: center;
+}
+
+.packageList span {
+  font-size: 1.4rem;
+  padding: 0 0.3rem;
+}
+
+.packageList li:not(:last-child) {
+  border-bottom: 1px solid #e0bff7;
+}
+
+.packageList li span:not(:last-child) {
+}
+
+.packageList li span {
+  word-break: break-all;
+}
+
+.itemBorder:not(:last-child) {
+  border-right: 1px solid #e0bff7;
+}
+.itemBorder {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check {
+  padding: 0.4rem 1rem;
+  background-color: #e0c9f7;
+  color: white;
+  font-size: 1rem;
+}
+
+.check:hover {
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: #e0bff7;
+}

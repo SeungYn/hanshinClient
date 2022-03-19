@@ -1,0 +1,26 @@
+.items {
+  display: grid;
+  grid-template-columns: 8% 12% 7% 31% 31% 10%;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.items:hover {
+  background-color: #fef6ff;
+}
+
+p {
+  /* 크기를 넘기면 자동으로 줄바꿈 */
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.selectBtn {
+  color: white;
+  background-color: #ab74f7;
+  width: 100%;
+}
+
+.selectBtn:hover {
+  cursor: pointer;
+}

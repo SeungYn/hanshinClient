@@ -1,0 +1,17 @@
+@keyframes start {
+}
+
+.banner {
+  text-align: center;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 1.6rem;
+}
+
+.banner_red {
+  background-color: red;
+}
+
+.banner_green {
+  background-color: blue;
+}

@@ -1,0 +1,18 @@
+.receiverForm__header {
+  display: flex;
+  justify-content: center;
+}
+
+.reveiverForm__header__exit {
+  right: 4px;
+}
+
+.receiverForm {
+  background-color: #e0c9f7;
+  width: 50%;
+  height: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,24 @@
+.alert_container {
+  position: relative;
+  z-index: 8;
+  background-color: green;
+  height: 100px;
+  width: 100px;
+}
+
+.banner {
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+  animation-name: start;
+  animation-duration: 2s;
+  z-index: 3;
+}
+
+.banner_red {
+  background-color: red;
+}
+
+.banner_green {
+  background-color: blue;
+}

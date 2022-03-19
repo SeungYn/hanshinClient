@@ -1,0 +1,27 @@
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  border: 1px solid #e5a3ff;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.auth__form auth__input:not(:last-child) {
+  border: 3px solid #e0bff7;
+  width: 15rem;
+}
+
+.auth__btn {
+  width: 15rem;
+  padding: 0;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

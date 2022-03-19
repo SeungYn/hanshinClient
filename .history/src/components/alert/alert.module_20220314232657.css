@@ -1,0 +1,24 @@
+@keyframes start {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 4rem;
+  }
+}
+
+.banner {
+  text-align: center;
+  font-size: 1.6rem;
+  position: fixed;
+  animation-name: start 1s;
+	an
+}
+
+.banner_red {
+  background-color: red;
+}
+
+.banner_green {
+  background-color: blue;
+}

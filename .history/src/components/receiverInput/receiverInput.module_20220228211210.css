@@ -1,0 +1,50 @@
+.receiverForm__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 0;
+  width: 100%;
+}
+
+.reveiverForm__header__exit {
+  position: absolute;
+  right: 10px;
+}
+
+.receiverForm {
+  /* #e0c9f7 */
+  background-color: white;
+
+  width: 50%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radio__group {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.name__group {
+  display: flex;
+}
+
+.packageList {
+  width: 90%;
+  background-color: white;
+  max-height: 50%;
+  overflow: scroll;
+}
+
+.check {
+  background-color: blueviolet;
+}
+
+.cancel {
+  background-color: #e0bff7;
+}

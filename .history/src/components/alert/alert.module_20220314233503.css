@@ -1,0 +1,32 @@
+@keyframes start {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 4rem;
+  }
+}
+.alert_container {
+  position: relative;
+  z-index: 9999;
+  background-color: green;
+  height: 100px;
+  width: 100px;
+}
+
+.banner {
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+  animation-name: start;
+  animation-duration: 2s;
+  z-index: 1;
+}
+
+.banner_red {
+  background-color: red;
+}
+
+.banner_green {
+  background-color: blue;
+}

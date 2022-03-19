@@ -1,0 +1,36 @@
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  border: 1px solid #e5a3ff;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.auth__input__group {
+  display: flex;
+}
+
+.auth__input {
+  border: 1px solid #e0bff7;
+  width: 16rem;
+  box-shadow: 10px 0px 13px -7px #000000, -10px 0px 13px -7px #000000;
+}
+
+.auth__input:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.auth__btn {
+  width: 15rem;
+  padding: 0;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
