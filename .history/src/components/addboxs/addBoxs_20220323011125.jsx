@@ -8,7 +8,6 @@ import {
   faCircleMinus,
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
-import LoadingSpin from '../loadingSpin/loadingSpin';
 
 const AddBoxs = ({ packageService, navigate }) => {
   const [boxList, setBoxList] = useState([
@@ -31,14 +30,8 @@ const AddBoxs = ({ packageService, navigate }) => {
   const countRef = useRef();
   const kindSelecterRef = useRef();
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = () => {
     packageService.createPackages(boxList);
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate('/');
-    }, 2000);
   };
 
   // const onSubmit = (e) => {
@@ -264,7 +257,6 @@ const AddBoxs = ({ packageService, navigate }) => {
           </button>
         </div>
       </form>
-      <LoadingSpin loading={loading} />
     </section>
   );
 };
