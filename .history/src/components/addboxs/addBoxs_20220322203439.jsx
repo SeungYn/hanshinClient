@@ -9,7 +9,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
-const AddBoxs = ({ packageService, navigate }) => {
+const AddBoxs = ({ packageService }) => {
   const [boxList, setBoxList] = useState([
     {
       date: `${String(new Date().getFullYear()).substring(2, 4)}.${
@@ -32,7 +32,7 @@ const AddBoxs = ({ packageService, navigate }) => {
 
   const onSubmit = () => {
     packageService.createPackages(boxList);
-    navigate('/');
+    useNavigate('/');
   };
 
   // const onSubmit = (e) => {

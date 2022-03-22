@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styles from './addBoxs.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useNavigate } from 'react-router-dom';
 import {
   faCirclePlus,
   faCartPlus,
@@ -9,7 +8,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
-const AddBoxs = ({ packageService, navigate }) => {
+const AddBoxs = ({ packageService }) => {
   const [boxList, setBoxList] = useState([
     {
       date: `${String(new Date().getFullYear()).substring(2, 4)}.${
@@ -31,8 +30,8 @@ const AddBoxs = ({ packageService, navigate }) => {
   const kindSelecterRef = useRef();
 
   const onSubmit = () => {
+    console.log('syb');
     packageService.createPackages(boxList);
-    navigate('/');
   };
 
   // const onSubmit = (e) => {

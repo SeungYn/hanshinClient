@@ -8,14 +8,11 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
 
   const [selectedPackages, setSelectedPackages] = useState([]);
   const [receiverInputActivate, setReceiverInputActivate] = useState(false);
-
+  console.log(goAddPackages);
   useEffect(() => {
     packageService
       .getNotTakePackages() //
-      .then((data) => {
-        console.log(data);
-        return setItem(data);
-      });
+      .then((data) => setItem(data));
   }, [receiverInputActivate]);
 
   const onExitInputForm = () => {
@@ -44,8 +41,14 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
 
   const onTakePackage = (name, position, selectedPackages1) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
+
     setSelectedPackages([]);
+
     setReceiverInputActivate(false);
+  };
+
+  const onCreatePackage = (packageList) => {
+    packageService.createPackages(packageList);
   };
 
   //전체 택배 등기 카테고리 귀찮아서 이렇게

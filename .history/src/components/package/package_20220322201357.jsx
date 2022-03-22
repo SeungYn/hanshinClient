@@ -44,7 +44,9 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
 
   const onTakePackage = (name, position, selectedPackages1) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
+    console.log(selectedPackages);
     setSelectedPackages([]);
+    console.log(selectedPackages);
     setReceiverInputActivate(false);
   };
 

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styles from './addBoxs.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useNavigate } from 'react-router-dom';
 import {
   faCirclePlus,
   faCartPlus,
@@ -9,7 +8,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
-const AddBoxs = ({ packageService, navigate }) => {
+const AddBoxs = ({ packageService }) => {
   const [boxList, setBoxList] = useState([
     {
       date: `${String(new Date().getFullYear()).substring(2, 4)}.${
@@ -31,8 +30,8 @@ const AddBoxs = ({ packageService, navigate }) => {
   const kindSelecterRef = useRef();
 
   const onSubmit = () => {
+    console.log('syb');
     packageService.createPackages(boxList);
-    navigate('/');
   };
 
   // const onSubmit = (e) => {
@@ -195,18 +194,21 @@ const AddBoxs = ({ packageService, navigate }) => {
                 name='receivedDate'
                 onChange={(event) => onChange(event, index)}
                 value={box.receivedDate}
+                required
               />
               <input
                 type='text'
                 name='position'
                 onChange={(event) => onChange(event, index)}
                 value={box.position}
+                required
               />
               <input
                 type='text'
                 name='name'
                 onChange={(event) => onChange(event, index)}
                 value={box.name}
+                required
               />
               <button
                 type='button'
@@ -218,42 +220,38 @@ const AddBoxs = ({ packageService, navigate }) => {
             </div>
           );
         })}
-
-        <div className={styles.bottom}>
-          <div className={styles.bottomBtn}>
-            <button id='test' className={`${styles.addBtn}`} onClick={onAdd}>
-              <FontAwesomeIcon icon={faCirclePlus} size='2x' />
-            </button>
-            <input
-              type='text'
-              name='count'
-              ref={countRef}
-              placeholder='숫자만 입력해주세요'
-              className={styles.countText}
-            />
-            <select
-              ref={kindSelecterRef}
-              name='kindSelect'
-              className={styles.kindSelecter}
-              onChange={onChangeSelectedBox}
-              value={kindSelected}
-            >
-              <option value='택배'>택배</option>
-              <option value='등기'>등기</option>
-            </select>
-            <button className={styles.addBtn} onClick={onMultiAdd}>
-              <FontAwesomeIcon icon={faCartPlus} size='2x' />
-            </button>
-          </div>
-
-          <button
-            type='submit'
-            className={`${styles.addBtn} ${styles.sendBtn}`}
+      </form>
+      <div className={styles.bottom}>
+        <div className={styles.bottomBtn}>
+          <button id='test' className={`${styles.addBtn}`} onClick={onAdd}>
+            <FontAwesomeIcon icon={faCirclePlus} size='2x' />
+          </button>
+          <input
+            type='text'
+            name='count'
+            ref={countRef}
+            placeholder='숫자만 입력해주세요'
+            className={styles.countText}
+          />
+          <select
+            ref={kindSelecterRef}
+            name='kindSelect'
+            className={styles.kindSelecter}
+            onChange={onChangeSelectedBox}
+            value={kindSelected}
           >
-            <FontAwesomeIcon icon={faPaperPlane} size='2x' />
+            <option value='택배'>택배</option>
+            <option value='등기'>등기</option>
+          </select>
+          <button className={styles.addBtn} onClick={onMultiAdd}>
+            <FontAwesomeIcon icon={faCartPlus} size='2x' />
           </button>
         </div>
-      </form>
+
+        <button type='submit' className={`${styles.addBtn} ${styles.sendBtn}`}>
+          <FontAwesomeIcon icon={faPaperPlane} size='2x' />
+        </button>
+      </div>
     </section>
   );
 };

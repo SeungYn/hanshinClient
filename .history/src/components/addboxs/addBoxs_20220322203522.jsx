@@ -9,7 +9,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 
-const AddBoxs = ({ packageService, navigate }) => {
+const AddBoxs = ({ packageService }) => {
   const [boxList, setBoxList] = useState([
     {
       date: `${String(new Date().getFullYear()).substring(2, 4)}.${
@@ -30,9 +30,9 @@ const AddBoxs = ({ packageService, navigate }) => {
   const countRef = useRef();
   const kindSelecterRef = useRef();
 
-  const onSubmit = () => {
+  const onSubmit1 = () => {
     packageService.createPackages(boxList);
-    navigate('/');
+    useNavigate('/');
   };
 
   // const onSubmit = (e) => {
@@ -140,7 +140,7 @@ const AddBoxs = ({ packageService, navigate }) => {
   const testkeypress = (e) => {};
   return (
     <section className={styles.addContainer}>
-      <form onSubmit={onSubmit} className={styles.addForm}>
+      <form onSubmit={onSubmit1} className={styles.addForm}>
         <div className={styles.addFormHeader}>
           <p className={styles.item}>날짜</p>
           <p className={styles.item}>송장번호</p>

@@ -43,9 +43,7 @@ function App({ packageService }) {
         <Route
           exact
           path='/add'
-          element={
-            <AddBoxs packageService={packageService} navigate={navigate} />
-          }
+          element={<AddBoxs packageService={packageService} />}
         />
       </Routes>
     </div>
