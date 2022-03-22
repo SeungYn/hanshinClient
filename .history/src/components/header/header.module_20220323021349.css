@@ -1,6 +1,5 @@
 header {
   position: sticky;
-  top: 0;
 }
 .headers {
   background: no-repeat url('./backimg.png');
@@ -11,6 +10,8 @@ header {
   align-items: center;
   padding: 0.1rem 1rem;
   z-index: 1;
+
+  top: 0;
 }
 
 .title {

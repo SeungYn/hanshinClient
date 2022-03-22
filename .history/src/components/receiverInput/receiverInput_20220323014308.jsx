@@ -36,6 +36,7 @@ const ReceiverInput = ({
 
   return (
     <div className={styles.testb}>
+      d
       <form className={styles.receiverForm}>
         <header className={styles.receiverForm__header}>
           <p className={styles.reveiverForm__header__title}>받는사람 확인</p>

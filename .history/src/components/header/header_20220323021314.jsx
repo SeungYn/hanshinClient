@@ -38,7 +38,7 @@ const Header = ({ goHome, onLogout }) => {
   }, [date, month, year, dates, day]);
 
   return (
-    <header>
+    <header className={styles.headers}>
       <div className={styles.headers}>
         <h1 onClick={goHome} className={styles.title}>
           HanShin
