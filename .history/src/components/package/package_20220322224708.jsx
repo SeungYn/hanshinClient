@@ -133,7 +133,6 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       ) : (
         ''
       )}
-      <div className={styles.loading}></div>
     </div>
   );
 };

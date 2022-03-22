@@ -48,7 +48,7 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       setSelectedPackages([]);
       console.log(11);
       setReceiverInputActivate(false);
-    }, 2000);
+    }, 5000);
   };
 
   //전체 택배 등기 카테고리 귀찮아서 이렇게
@@ -133,7 +133,6 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       ) : (
         ''
       )}
-      <div className={styles.loading}></div>
     </div>
   );
 };

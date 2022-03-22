@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import styles from './receiverInput.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import LoadingSpin from '../loadingSpin/loadingSpin';
 
 const ReceiverInput = ({
   selectedPackages,
@@ -110,7 +109,6 @@ const ReceiverInput = ({
           가져가기
         </button>
       </div>
-      <LoadingSpin />
     </form>
   );
 };
