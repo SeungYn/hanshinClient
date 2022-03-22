@@ -6,7 +6,7 @@ import styles from './package.module.css';
 
 const Package = ({ packageService, modifyable, goAddPackages }) => {
   const [item, setItem] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [selectedPackages, setSelectedPackages] = useState([]);
   const [receiverInputActivate, setReceiverInputActivate] = useState(false);
 
@@ -47,7 +47,6 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
     console.log('loading');
     setLoading(true);
-    console.log(loading);
     setTimeout(() => {
       setSelectedPackages([]);
       console.log(11);

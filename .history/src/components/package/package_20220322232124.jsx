@@ -45,9 +45,7 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
 
   const onTakePackage = (name, position, selectedPackages1) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
-    console.log('loading');
     setLoading(true);
-    console.log(loading);
     setTimeout(() => {
       setSelectedPackages([]);
       console.log(11);
@@ -138,7 +136,7 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       ) : (
         ''
       )}
-      {loading ? <LoadingSpin loading={loading} /> : ''}
+      <LoadingSpin loading={loading} />
     </div>
   );
 };

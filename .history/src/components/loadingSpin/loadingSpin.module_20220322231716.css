@@ -1,14 +1,6 @@
-.loading_on {
-  display: flex;
-}
-
-.loading_off {
-  display: none;
-}
-
 .container {
   position: fixed;
-
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -49,13 +49,7 @@ const ReceiverInput = ({
       <section className={styles.receiverForm__body}>
         <div className={styles.name__group}>
           <p className={styles.input__title}>이름</p>
-          <input
-            ref={nameRef}
-            className={nameValidation ? styles.notName : ''}
-            type='text'
-            placeholder='이름'
-            required
-          />
+          <input ref={nameRef} type='text' placeholder='이름' required />
         </div>
         <ul className={styles.radio__group}>
           {positions.map((item, index) => {

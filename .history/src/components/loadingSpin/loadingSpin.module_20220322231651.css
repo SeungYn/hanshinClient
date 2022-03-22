@@ -1,20 +1,12 @@
-.loading_on {
-  display: flex;
-}
-
-.loading_off {
-  display: none;
-}
-
 .container {
   position: fixed;
-
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgb(128, 128, 128, 0.5);
+  background-color: gray 0.1;
 }
 
 .loading {

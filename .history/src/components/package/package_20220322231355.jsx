@@ -6,7 +6,7 @@ import styles from './package.module.css';
 
 const Package = ({ packageService, modifyable, goAddPackages }) => {
   const [item, setItem] = useState([]);
-  const [loading, setLoading] = useState(false);
+
   const [selectedPackages, setSelectedPackages] = useState([]);
   const [receiverInputActivate, setReceiverInputActivate] = useState(false);
 
@@ -45,14 +45,10 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
 
   const onTakePackage = (name, position, selectedPackages1) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
-    console.log('loading');
-    setLoading(true);
-    console.log(loading);
     setTimeout(() => {
       setSelectedPackages([]);
       console.log(11);
       setReceiverInputActivate(false);
-      setLoading(false);
     }, 2000);
   };
 
@@ -138,7 +134,7 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       ) : (
         ''
       )}
-      {loading ? <LoadingSpin loading={loading} /> : ''}
+      <LoadingSpin />
     </div>
   );
 };

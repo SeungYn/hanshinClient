@@ -6,7 +6,7 @@ import styles from './package.module.css';
 
 const Package = ({ packageService, modifyable, goAddPackages }) => {
   const [item, setItem] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [selectedPackages, setSelectedPackages] = useState([]);
   const [receiverInputActivate, setReceiverInputActivate] = useState(false);
 
@@ -138,7 +138,7 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
       ) : (
         ''
       )}
-      {loading ? <LoadingSpin loading={loading} /> : ''}
+      {loading ? <LoadingSpin loading={loading} /> : 'd'}
     </div>
   );
 };

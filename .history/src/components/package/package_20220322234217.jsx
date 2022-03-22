@@ -47,7 +47,6 @@ const Package = ({ packageService, modifyable, goAddPackages }) => {
     packageService.updateTakePackages(name, position, selectedPackages1);
     console.log('loading');
     setLoading(true);
-    console.log(loading);
     setTimeout(() => {
       setSelectedPackages([]);
       console.log(11);

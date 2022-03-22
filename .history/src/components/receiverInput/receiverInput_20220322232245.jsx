@@ -17,17 +17,13 @@ const ReceiverInput = ({
   ]);
   const [selectedPosition, setSelectedPosition] = useState('대표');
 
-  const [nameValidation, setNameValidation] = useState(false);
+  const positionRef = useRef();
   const nameRef = useRef();
 
   const TakePackage = (e) => {
     e.preventDefault();
-    if (!nameRef.current.value) {
-      setNameValidation(true);
-      return false;
-    }
+
     onTakePackage(nameRef.current.value, selectedPosition, selectedPackages);
-    setNameValidation(false);
   };
 
   const onPositionChange = (e) => {
@@ -49,13 +45,7 @@ const ReceiverInput = ({
       <section className={styles.receiverForm__body}>
         <div className={styles.name__group}>
           <p className={styles.input__title}>이름</p>
-          <input
-            ref={nameRef}
-            className={nameValidation ? styles.notName : ''}
-            type='text'
-            placeholder='이름'
-            required
-          />
+          <input ref={nameRef} type='text' placeholder='이름' required />
         </div>
         <ul className={styles.radio__group}>
           {positions.map((item, index) => {
