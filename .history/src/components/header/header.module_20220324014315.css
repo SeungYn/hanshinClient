@@ -1,0 +1,43 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.headers {
+  background: no-repeat url('./backimg.png');
+  background-size: cover;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  color: white;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+.day {
+  font-size: 2rem;
+}
+
+.menu {
+  display: flex;
+}
+.menu__item {
+  border: 0;
+  background: none;
+  font-size: 1rem;
+  border: 1px solid transparent;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+}
