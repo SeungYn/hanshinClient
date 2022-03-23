@@ -51,11 +51,11 @@ const Package = ({ packageService, modifyable, goAddPackages, param }) => {
   const onTakePackage = (name, position, selectedPackages, nowDay) => {
     packageService.updateTakePackages(name, position, selectedPackages, nowDay);
     setLoading(true);
-
+    setReceiverInputActivate(false);
     //ㅎ해외서버 db업데이트가 느려서 해놈
     setTimeout(() => {
       setSelectedPackages([]);
-      setReceiverInputActivate(false);
+
       setLoading(false);
     }, 2000);
   };

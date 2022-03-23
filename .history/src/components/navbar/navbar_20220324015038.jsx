@@ -25,13 +25,13 @@ const Navbar = ({ modifyable }) => {
         ) : (
           ''
         )}
-        {/* {modifyable ? (
+        {modifyable ? (
           <Link to='/search'>
             <li className={styles.navbar__item}>찾기</li>
           </Link>
         ) : (
           ''
-        )} */}
+        )}
       </ul>
     </nav>
   );

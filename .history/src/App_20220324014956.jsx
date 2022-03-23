@@ -76,13 +76,9 @@ function App({ packageService }) {
             <AddBoxs packageService={packageService} navigate={navigate} />
           }
         />
-        <Route
-          exact
-          path='/search'
-          element={
-            <AddBoxs packageService={packageService} navigate={navigate} />
-          }
-        />
+        <Route exact path='/dayfind'>
+          공사중
+        </Route>
       </Routes>
     </div>
   );
